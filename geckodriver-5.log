@@ -1,0 +1,14 @@
+1705312122836	geckodriver	INFO	Listening on 127.0.0.1:52695
+1705312125892	mozrunner::runner	INFO	Running command: "C:\\Users\\Sprint User\\.cache\\selenium\\firefox\\win64\\121.0.1\\firefox.exe" "--marionette" "--user-data ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SPRINT~1\\AppData\\Local\\Temp\\rust_mozprofileb3wQtA"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1705312128123	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-data-dir"
+1705312128208	Marionette	INFO	Listening on port 52744
+WebDriver BiDi listening on ws://127.0.0.1:52696
+Read port: 52744
+1705312128390	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52696/devtools/browser/4442c09c-e125-4030-99b6-b4debd1af9ab
+1705312154935	Marionette	INFO	Stopped listening on port 52744
+Dynamically enable window occlusion 1

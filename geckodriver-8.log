@@ -1,0 +1,17 @@
+1705314331707	geckodriver	INFO	Listening on 127.0.0.1:51250
+1705314334781	mozrunner::runner	INFO	Running command: "C:\\Users\\Sprint User\\.cache\\selenium\\firefox\\win64\\121.0.1\\firefox.exe" "--marionette" "--user-data ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SPRINT~1\\AppData\\Local\\Temp\\rust_mozprofilezTzu6A"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1705314335106	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-data-dir"
+1705314335189	Marionette	INFO	Listening on port 51259
+WebDriver BiDi listening on ws://127.0.0.1:51251
+Read port: 51259
+1705314335342	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51251/devtools/browser/227868a9-ce5e-4924-b4af-d495a78f15b5
+JavaScript warning: https://web.telegram.org/k/index-V9prFj2_.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1705314365154	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1705314848550	Marionette	INFO	Stopped listening on port 51259
+Dynamically enable window occlusion 1
+console.error: (new Error("Data is not ready.", "resource://gre/modules/JSONFile.sys.mjs", 178))

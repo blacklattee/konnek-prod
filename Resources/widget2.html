@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+    
+    <!-- <script type="text/javascript" 
+    src="https://media.wekonnek.id/konnek/widget/widgetchat_new.js"></script> -->
+    <script type="text/javascript" src="widgetchat_new.js"></script>
+    <script src="https://media.wekonnek.id/konnek/widget/socket-io.client.js"></script>
+    <script>
+      var widget = new ChatWidget({
+        env: 'stg',
+        clientId: 'b699182d-5ff0-4161-b649-239234ff9cb9',
+        clientSecret: '1dc8e065-2915-4b4e-8df2-45040e8314bd',
+        email: '',
+        name: '',
+        sso: false,
+        /* additionalInfo: [
+          { label:'Whatsapp', name:'wa_number', placeholder:'Your Whatsapp Number', type:'autofill', value:'085890080994'},
+          { label:'Access', name:'access', placeholder:'Access Code', type:'input'},
+        ], */
+      }).init(io);
+    </script>

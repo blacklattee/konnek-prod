@@ -1,0 +1,15 @@
+1705314347992	geckodriver	INFO	Listening on 127.0.0.1:51308
+1705314351024	mozrunner::runner	INFO	Running command: "C:\\Users\\Sprint User\\.cache\\selenium\\firefox\\win64\\121.0.1\\firefox.exe" "--marionette" "--user-data ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SPRINT~1\\AppData\\Local\\Temp\\rust_mozprofileERrV0s"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1705314351357	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-data-dir"
+1705314351437	Marionette	INFO	Listening on port 51317
+WebDriver BiDi listening on ws://127.0.0.1:51309
+Read port: 51317
+1705314351600	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51309/devtools/browser/d58ce3a3-63cc-431a-b22d-58b80907fcd6
+JavaScript warning: https://web.telegram.org/k/index-V9prFj2_.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1705314360143	Marionette	INFO	Stopped listening on port 51317
+Dynamically enable window occlusion 1
