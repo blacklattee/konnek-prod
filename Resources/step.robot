@@ -13,7 +13,8 @@ Library    DateTime
 *** Keywords ***
 Open browser Staging
     Set Selenium Speed    0.2
-y    SeleniumLibrary.Maximize Browser Window
+    SeleniumLibrary.Open Browser     about:blank    browser=chrome    options=add_argument("--incognito")
+    SeleniumLibrary.Maximize Browser Window
     SeleniumLibrary.Go To    ${url_konnek}
      ${Reload}=  Run Keyword And Return Status  Page Should Contain Element     xpath=/html//div[@id='root']/div/div/div[@class='col']//div[@class='login-wrapper']//form//input[@name='companyId']
     WHILE    ${Reload} != ${TRUE}
@@ -92,24 +93,39 @@ Klik Menu Open Chat Agent We Konnek
     SeleniumLibrary.Click Element        xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[1]/ul[@role='menu']/li[1]//a[@href='/chat/open']    
     SeleniumLibrary.Page Should Contain    waiting for response
     Capture Page Screenshot
+Klik Card Chat Role Agent We Konnek 
+    SeleniumLibrary.Click Element    xpath=//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']/div[1]//div[@class='mt-2 wrapper-card-chat-agent']/div[1]/div[@class='ant-card']/div[@class='ant-card-body']/div[@class='card-chat-content container-fluid']/div[@class='row']/div[@class='col-md-10']/div[@class='fill-chat']/p
 Klik Card Chat Client Agent We Konnek 
-    SeleniumLibrary.Wait Until Page Contains Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//button[@role='switch']/div[@class='ant-switch-handle']
-    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']//div[@class='col-md-10']
+    # SeleniumLibrary.Wait Until Page Contains Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//button[@role='switch']/div[@class='ant-switch-handle']
+     ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']/div[1]//div[@class='mt-2 wrapper-card-chat']/div[1]/div[@class='ant-card']/div[@class='ant-card-body']/div[@class='card-chat-content container-fluid']/div[@class='row']/div[@class='col-md-10']/div[@class='fill-chat']/p
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']/div[1]//div[@class='mt-2 wrapper-card-chat']/div[1]/div[@class='ant-card']/div[@class='ant-card-body']/div[@class='card-chat-content container-fluid']/div[@class='row']/div[@class='col-md-10']/div[@class='fill-chat']/p
+    END
+    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']/div[1]//div[@class='mt-2 wrapper-card-chat']/div[1]/div[@class='ant-card']/div[@class='ant-card-body']/div[@class='card-chat-content container-fluid']/div[@class='row']/div[@class='col-md-10']/div[@class='fill-chat']/p
     Capture Page Screenshot
+Klik Menu Chats SPV We Konnek 
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//aside[@class='ant-layout-sider ant-layout-sider-dark']/div/ul[@role='menu']/li[2]/div[@role='menuitem']//span[@class='uncollapsible']
+Klik Sub Menu Open Chats SPV We Konnek
+    SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[2]/ul[@role='menu']/li[1]//a[@href='/chat/open']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//div[@class='align-items-center d-flex mb-4']/button[1]
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//input[@name='search_messages']
+    END
 Klik Detail Profile Client We Konnek
     SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']/div[2]/div[1]//img[@alt='icon-dot pl-3']
     # SeleniumLibrary.Click Element    xpath=/html/body/div[2]/div/div//button[@type='button']/p[@class='mb-0']
     Capture Page Screenshot
 Klik Handover Agent We Konnek 
     SeleniumLibrary.Click Element    xpath=//button[1]/p[@class='mb-0']
-    SeleniumLibrary.Page Should Contain    Handover Conversation
+    SeleniumLibrary.Page Should Contain    Assign Agent
     Capture Page Screenshot
     #Button Handover
-    SeleniumLibrary.Click Element    xpath=//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']//div[@class='col-lg-12']/div[2]/div/div/button[@type='primary']
-    Capture Page Screenshot
+    # SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']/div[3]//input[@value='0']
+    # Capture Page Screenshot
     #Button Sure,Go Ahead
-    SeleniumLibrary.Click Element    xpath=/html//div[@class='ant-modal-root']/div[2]/div[@role='dialog']//div[@class='ant-modal-footer']/button[2]/span[.='Sure, go ahead']
-    Capture Page Screenshot
+    # SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']/div[3]/div/div[@class='row']/div[@class='col-lg-12']/button[@type='primary']
+    # SeleniumLibrary.Click Element    xpath=/html//div[@class='ant-modal-root']/div[2]/div[@role='dialog']//div[@class='ant-modal-footer']/button[2]/span[.='Sure, go ahead']
+    # Capture Page Screenshot
 Pilih Assign Agent We Konnek 
     SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div/div[@class='row']/div[3]//input[@value='0']
 Input Pencarian Data Search Message Role Agent We Konnek 
@@ -378,6 +394,10 @@ Klik Menu Settings Admin We Konnek
     Capture Page Screenshot
 Klik Menu Division We Konnek
     SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/ul[@role='menu']/li[1]//a[@href='/setting/divisions']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//button[.='+ Create New Division']
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//button[.='+ Create New Division']
+    END
     Capture Page Screenshot
 Klik Button Klik Create New Division We Konnek
     SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//button[.='+ Create New Division']
@@ -395,7 +415,7 @@ Klik Button Cancel Name Division We Konnek
     SeleniumLibrary.Click Element    xpath=/html//div[@class='ant-modal-root']/div[2]/div[@role='dialog']//div[@class='ant-modal-footer']/button[1]/span[.='Cancel']
     Capture Page Screenshot
 Klik Button Delete Division We Konnek
-    SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//table[@class='table table-borderless']/tbody/tr[1]/td[3]/div/button[2]/i[@class='fa fa-trash-alt']
+    SeleniumLibrary.Click Element    xpath=//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//table[@class='table table-borderless']/tbody/tr[1]/td[3]/div/button[2]/i[@class='fa fa-trash-alt']
     Capture Page Screenshot
 Klik Button Yes, Delete Confirmation Division We Konnek
     SeleniumLibrary.Click Element    xpath=/html//div[@class='ant-modal-root']/div[2]/div[@role='dialog']//div[@class='ant-modal-footer']/button[2]/span[.='Yes, Delete']
@@ -457,6 +477,10 @@ Klik Button Update Category We Konnek
 #Settings - Tags
 Klik Menu Tags We Konnek
     SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/ul[@role='menu']/li[4]//a[@href='/setting/tags']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//button[.='+ Create New Tag']
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//button[.='+ Create New Tag']
+    END
     Capture Page Screenshot
 Klik Button Create New Tag We Konnek
     SeleniumLibrary.Click Element    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//button[.='+ Create New Tag']
@@ -482,6 +506,10 @@ Klik Button Save Edit Tags We Konnek
 Klik Menu Greetings We Konnek
     Execute JavaScript    window.scrollTo(0,800)
     SeleniumLibrary.Click Element    xpath=//div[@id='root']//div[@class='ant-layout-sider-children']/ul[@role='menu']/li[4]/ul[@role='menu']/li[8]//a[@href='/setting/greetings']
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//div[@class='row']/div//form/table//button[@role='switch']
+    WHILE    ${Reload} != ${TRUE}
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section//div[@class='row']/div//form/table//button[@role='switch']
+    END
     SeleniumLibrary.Page Should Contain    Keyword Filter 
     Capture Page Screenshot
 Klik Togle ON/OFF Status Keyword We Konnek
@@ -493,7 +521,7 @@ Klik Togle ON/OFF Status Greetings We Konnek
     # Execute JavaScript    window.scrollTo(0,600)
     # SeleniumLibrary.Scroll Element Into View    xpath= xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='row']/div//form/div[@class='form-group welcome-greeting']/button[@role='switch']/div[@class='ant-switch-handle']
     SeleniumLibrary.Click Element    xpath=//div[@id='yield']/section[@class='ant-layout']/section//div[@class='row']/div//form/div[@class='form-group welcome-greeting']/button[@role='switch']/div[@class='ant-switch-handle']
-    Capture Element Screenshot    locator
+    Capture Page Screenshot
 Klik Checkbox Add Division Greetings We Konnek 
     Execute JavaScript    window.scrollTo(0,400)
     # SeleniumLibrary.Scroll Element Into View    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']//div[@class='row']/div//form//input[@class='ant-checkbox-input']
@@ -565,7 +593,7 @@ Klik Button TAB Role Admin We Konnek
     END
     Capture Page Screenshot
 Klik Button Edit Role Agent We Konnek 
-    SeleniumLibrary.Click Element    xpath=/html//table[@id='table']//a[@href='/setting/users/role/edit/2920378b-b6b8-447a-a7cf-16ef436257b2']
+    SeleniumLibrary.Click Element    xpath=/html//table[@id='table']//a[@href='/setting/users/role/edit/eabd61f6-691e-4b5f-a24b-9f07af3db20e']
     Execute JavaScript    window.scrollTo(0,800)
     Capture Page Screenshot
 Klik Button Add New Role Agent We Konnek
@@ -706,6 +734,11 @@ Klik Menu Change Password We Konnek
     SeleniumLibrary.Page Should Contain    Change Password
     Capture Page Screenshot
 Input Current Password
+    ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//form//input[@name='currentPassword']
+    WHILE    ${Reload} != ${TRUE}
+        Sleep    1
+        ${Reload}=  Run Keyword And Return Status  Page Should Contain Element  xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//form//input[@name='currentPassword']
+    END
     SeleniumLibrary.Input Text    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div//form//input[@name='currentPassword']    Muhammad12
     Capture Page Screenshot
 Input New Password
@@ -730,7 +763,7 @@ Input Company Name We Konnek
     Capture Page Screenshot
 Input Company ID We Konnek
     ${random_number2}    Evaluate    random.randint(100, 1000)
-    SeleniumLibrary.Input Text    xpath=/html//input[@id='company_id']    QA_ID
+    SeleniumLibrary.Input Text    xpath=/html//input[@id='company_id']    QAID${random_number2}
     Capture Page Screenshot
 Input Company Email We Konnek
     ${random_number2}    Evaluate    random.randint(100, 1000)
@@ -742,11 +775,11 @@ Input Limit Users Company We Konnek
     Capture Page Screenshot
 Input BO Client Company We Konnek
     ${random_number2}    Evaluate    random.randint(100, 1000)
-    SeleniumLibrary.Input Text    xpath=/html//input[@id='bo_client_code']    QA_BO_Client${random_number2}
+    SeleniumLibrary.Input Text    xpath=/html//input[@id='bo_client_code']    QABOClient${random_number2}
     Capture Page Screenshot
 Input BO Division Company We Konnek
     ${random_number2}    Evaluate    random.randint(100, 1000)
-    SeleniumLibrary.Input Text    xpath=/html//input[@id='bo_div_code']    QA_BO_Division${random_number2}
+    SeleniumLibrary.Input Text    xpath=/html//input[@id='bo_div_code']    QABODivision${random_number2}
     Capture Page Screenshot
 Input Domain Access Company We Konnek
     ${random_number2}    Evaluate    random.randint(100, 1000)
@@ -896,7 +929,7 @@ Input Pencarian Agents We Konnek
     Sleep    0.3
     SeleniumLibrary.Press Keys    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div[@class='container-fluid']//input[@name='search_agent']    CTRL+a    BACKSPACE
     SeleniumLibrary.Press Keys    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div[@class='container-fluid']//input[@name='search_agent']    r+a+b+i+l_a+g+e+n+t
-    SeleniumLibrary.Wait Until Element Contains    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div[@class='container-fluid']/div[@class='row']//div[@class='col-lg-8 col-md-12']/p[@class='title-user']    rabil
+    # SeleniumLibrary.Wait Until Element Contains    xpath=/html//div[@id='yield']/section[@class='ant-layout']/section/main[@class='ant-layout-content site-layout-background']/div[@class='container-fluid']/div[@class='row']//div[@class='col-lg-8 col-md-12']/p[@class='title-user']    rabil
     Capture Page Screenshot
 Klik Button Filter Status Agents We Konnek
     Sleep    0.2

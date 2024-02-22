@@ -7,7 +7,7 @@ Resource    ../Keywords/variables.robot
 Resource    ../Resources/step.robot
 
 *** Test Cases ***
-TC_Settings_Chat Distribution
+TC_Settings_Change Password
     Open browser Staging
     Input Company ID, Email dan password
     Klik Button Login

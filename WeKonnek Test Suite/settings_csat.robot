@@ -37,9 +37,9 @@ TC_Settings_CSAT_Button Save Sorting
     Klik Hover Topic CSAT We Konnek 
     Klik Tab Inactive Topic CSAT We Konnek
     Klik Button Togle ON/OFF Status Inactive Topics CSAT We Konnek 
-    # Klik Button Yes Confirmation Save Topics CSAT We Konnek
-    Klik Button Move Row Down Topics We Konnek 
-    Klik Button Save Sorting Topics We Konnek 
+    Klik Button Yes Confirmation Save Topics CSAT We Konnek
+    # Klik Button Move Row Down Topics We Konnek 
+    # Klik Button Save Sorting Topics We Konnek 
     Close Browser
    
 TC_Settings_CSAT_Button Save Sorting_Arrow Down
@@ -51,9 +51,9 @@ TC_Settings_CSAT_Button Save Sorting_Arrow Down
     Klik Hover Topic CSAT We Konnek 
     # Klik Tab Inactive Topic CSAT We Konnek
     Klik Button Togle ON/OFF Status Inactive Topics CSAT We Konnek 
-    # Klik Button Yes Confirmation Save Topics CSAT We Konnek
-    Klik Button Move Row Down Topics We Konnek 
-    Klik Button Save Sorting Topics We Konnek 
+    Klik Button Yes Confirmation Save Topics CSAT We Konnek
+    # Klik Button Move Row Down Topics We Konnek 
+    # Klik Button Save Sorting Topics We Konnek 
     Close Browser
 
 

@@ -62,7 +62,7 @@ TC_Super Admin We Konnek_Filtering Oldest
     Klik Filtering Sort By Oldest We Konnek
     Klik Button Apply Filtering We Konnek
     Close Browser
-TC_Settings_Division_Role Agent
+TC_Settings_Admin_Role Agent
     Open browser Staging
     Input Company ID, Email dan password Admin
     Klik Button Login Admin QA Konnek

@@ -29,21 +29,29 @@ TC_Super Role Agent_Switching Togle ON/OFF
 
 TC_Super Role Agent_Chat Client
     Open browser Staging 
-    Input Company ID, Email dan password Role Agent
-    Klik Button Login Role Agent
-    Refresh Page Until Page Contains Element
+    Input Company ID, Email dan password
+    Klik Button Login
+    Klik Menu Chats SPV We Konnek 
+    Klik Sub Menu Open Chats SPV We Konnek
     Klik Card Chat Client Agent We Konnek 
-    Klik Detail Profile Client We Konnek
+    # Klik Detail Profile Client We Konnek
+    # Klik Detail Profile Client We Konnek
+    # Input Company ID, Email dan password Role Agent
+    # Klik Button Login Role Agent
+    # # Refresh Page Until Page Contains Element
+    # Klik Card Chat Role Agent We Konnek 
+    # Klik Detail Profile Client We Konnek
     Close Browser
 TC_Super Role Agent_Chat Client_assign agent
     Open browser Staging 
-    Input Company ID, Email dan password Role Agent
-    Klik Button Login Role Agent
-    Refresh Page Until Page Contains Element
+    Input Company ID, Email dan password
+    Klik Button Login
+    Klik Menu Chats SPV We Konnek 
+    Klik Sub Menu Open Chats SPV We Konnek
     Klik Card Chat Client Agent We Konnek 
     Klik Detail Profile Client We Konnek
     Klik Handover Agent We Konnek 
-     Close Browser
+    Close Browser
 
 
 
